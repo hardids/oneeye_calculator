@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153f39">
+  <meta name="description" content="대출 상환방식 비교부터 예·적금 세후 수익, 연봉 실수령액, 면적과 평단가까지. 한눈에 보는 생활금융 계산기.">
+  <meta property="og:title" content="한눈에 금융 — 생활금융 계산기">
+  <meta property="og:description" content="대출, 저축, 월급, 우리 집. 필요한 숫자를 명확하게 계산하세요.">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <title>한눈에 금융 — 생활금융 계산기</title>
+</head>
+<body>
+<noscript><p style="padding:24px;text-align:center">계산기를 사용하려면 브라우저에서 JavaScript를 켜 주세요.</p></noscript>
+<a href="#main" class="skip">본문으로 이동</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#loan" aria-label="한눈에 금융 홈"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>한눈에<span class="brand-sub">금융</span></span></a>
+    <nav class="main-nav" aria-label="계산기 선택">
+      <a href="#loan" data-page="loan">대출</a>
+      <a href="#savings" data-page="savings">예금·적금</a>
+      <a href="#salary" data-page="salary">연봉</a>
+      <a href="#area" data-page="area">면적·평단가</a>
+    </nav>
+    <button class="saved-button" id="saved-open"><span id="saved-icon"></span><span>저장한 계산</span><b id="saved-count">0</b></button>
+  </div>
+</header>
+<main id="main" class="container" tabindex="-1">
+  <div class="intro">
+    <div><div class="eyebrow" id="eyebrow">LOAN CALCULATOR</div><h1 id="page-title">내 대출, 한눈에 계산해요.</h1><p id="page-description">매달 갚을 금액부터 총이자까지, 나에게 맞는 상환 계획을 찾아보세요.</p></div>
+    <button class="standards-chip" id="standards-open"><span class="status-dot"></span>계산 기준 보기 <span aria-hidden="true">↗</span></button>
+  </div>
+  <div class="calculator-layout">
+    <section class="input-panel panel" aria-labelledby="input-title"><div class="panel-heading"><h2 id="input-title">대출 조건</h2><button id="reset" class="text-button">초기화 <span aria-hidden="true">↺</span></button></div><div id="form-area"></div><div id="input-error" class="input-error" role="alert" hidden></div><div class="input-bottom"><span id="lock-icon"></span>입력한 정보는 서버에 저장하지 않아요.</div></section>
+    <section class="result-area" aria-label="계산 결과"><div id="results"></div></section>
+  </div>
+  <section class="learn-section" aria-labelledby="learn-title"><div class="section-title"><h2 id="learn-title">알아두면 좋은 계산 이야기</h2><span>숫자 뒤의 의미까지</span></div><div id="learn-cards" class="learn-grid"></div></section>
+  <footer><div class="footer-brand">한눈에 <span>생활금융 계산기</span></div><p>계산 결과는 예상치이며, 실제 상품의 지급일·상환일 및 적용 조건에 따라 달라질 수 있습니다.</p><div class="footer-bottom"><span>© 2026 한눈에 금융</span><button class="text-button" id="sources-open">계산식과 출처</button><span>기준 확인 2026.10.10</span></div></footer>
+</main>
+<dialog id="modal"><div class="modal-head"><h2 id="modal-title"></h2><button id="modal-close" class="icon-button" aria-label="닫기">✕</button></div><div id="modal-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

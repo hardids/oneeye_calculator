@@ -1,0 +1,107 @@
+{
+  "title": "소득세법 시행령 별표 2 근로소득 간이세액표",
+  "amended": "2026-02-27",
+  "effective": "2026-03-01",
+  "verified_as_of": "2026-10-10",
+  "official_pdf_url": "https://www.law.go.kr/LSW/flDownload.do?bylClsCd=110201&flSeq=169798151&gubun=",
+  "official_current_url": "https://www.law.go.kr/법령별표서식/(소득세법시행령,별표2)",
+  "official_hometax_url": "https://hometax.go.kr/websquare/websquare.html?tm2lIdx=410600000&tm3lIdx=4106030000&tmIdx=41&w2xPath=%2Fui%2Fpp%2Findex_pp.xml",
+  "rows": 646,
+  "row_format": [
+    "monthly_taxable_lower_inclusive_krw",
+    "monthly_taxable_upper_exclusive_krw",
+    "family_1_tax_krw",
+    "family_2_tax_krw",
+    "family_3_tax_krw",
+    "family_4_tax_krw",
+    "family_5_tax_krw",
+    "family_6_tax_krw",
+    "family_7_tax_krw",
+    "family_8_tax_krw",
+    "family_9_tax_krw",
+    "family_10_tax_krw",
+    "family_11_tax_krw"
+  ],
+  "below_first_row_tax": 0,
+  "exact_10000000_family_taxes": [
+    1507400,
+    1431570,
+    1200840,
+    1170840,
+    1140840,
+    1110840,
+    1080840,
+    1050840,
+    1020840,
+    990840,
+    960840
+  ],
+  "child_adjustment": {
+    "age_min": 8,
+    "age_max": 20,
+    "1": 20830,
+    "2": 45830,
+    "3_or_more_formula": "45830 + (children - 2) * 33330",
+    "zero_floor": true
+  },
+  "higher_income_formulas": [
+    {
+      "lower_exclusive": 10000000,
+      "upper_inclusive": 14000000,
+      "base_add": 25000,
+      "excess_above": 10000000,
+      "excess_multiplier": 0.98,
+      "rate": 0.35
+    },
+    {
+      "lower_exclusive": 14000000,
+      "upper_inclusive": 28000000,
+      "base_add": 1397000,
+      "excess_above": 14000000,
+      "excess_multiplier": 0.98,
+      "rate": 0.38
+    },
+    {
+      "lower_exclusive": 28000000,
+      "upper_inclusive": 30000000,
+      "base_add": 6610600,
+      "excess_above": 28000000,
+      "excess_multiplier": 0.98,
+      "rate": 0.4
+    },
+    {
+      "lower_exclusive": 30000000,
+      "upper_inclusive": 45000000,
+      "base_add": 7394600,
+      "excess_above": 30000000,
+      "excess_multiplier": 1,
+      "rate": 0.4
+    },
+    {
+      "lower_exclusive": 45000000,
+      "upper_inclusive": 87000000,
+      "base_add": 13394600,
+      "excess_above": 45000000,
+      "excess_multiplier": 1,
+      "rate": 0.42
+    },
+    {
+      "lower_exclusive": 87000000,
+      "upper_inclusive": null,
+      "base_add": 31034600,
+      "excess_above": 87000000,
+      "excess_multiplier": 1,
+      "rate": 0.45
+    }
+  ],
+  "source_sha256": "f284aa58f948f0819d56ffab3139dc49b51305463ceaded85f1547de3c3359ab",
+  "validation": [
+    "All rows have 11 family columns",
+    "All lower/upper bounds are continuous",
+    "Tax is nonnegative and a multiple of 10",
+    "For each family column, tax never decreases as pay increases",
+    "For each pay row, tax never increases as family count increases",
+    "All 646 rows (7,106 tax cells) match a second independent pdfplumber extraction",
+    "Visually verified original PDF pages 1, 14 and 27: child adjustments, 3.5m sample, exact 10m base and every high-income formula"
+  ]
+}

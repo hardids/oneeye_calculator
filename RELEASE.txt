@@ -1,0 +1,8 @@
+한눈에 금융 1.1.0
+점검일: 2026-10-10
+Source commit: 876241ffe9cabb10d132fbf0bd5f386fb0d7cb9f
+
+GitHub Pages 배포: DEPLOY_GITHUB_PAGES.md
+재점검 결과: docs/recheck-2026-10-10.md
+시작 파일: dist/index.html (HTTP 서버 필요)
+테스트: npm test (Node.js 24 이상)
